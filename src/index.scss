@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'CreamySugar';
+  src: local('CreamySugar'), url(sources/fonts/CreamySugar.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Beary';
+  src: local('Beary'), url(sources/fonts/Beary.ttf) format('ttf');
+}
+
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: calc($sizeValue/10) * 1rem;
+}
+$red: #FF0123;
+$blue:#0561F5;
+$orange:#E34F00;
+
+
+body {
+  background: #F7F7F7;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: Beary,
+    sans-serif;
+  @include fontSize(15);
+  color: $blue;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a, p span {
+  color: $orange;
+
+}
+
+header {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  width: calc(100% - 40px);
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px;
+  font-family: CreamySugar,
+  sans-serif;
+  a {
+    color: $red;
+    text-decoration: none;
+    @include fontSize(38);
+
+  }
+  nav {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    a {
+      @include fontSize(28);
+
+    }
+  }
+
+}

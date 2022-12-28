@@ -4,7 +4,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 const SingleProject = ({data})=> {
 	const videoJsOptions = {
-	  autoplay: true,
+	  autoplay: false,
 	  controls: true,
 	  responsive: true,
 	  fluid: true,
