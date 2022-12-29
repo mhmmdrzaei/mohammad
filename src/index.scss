@@ -17,10 +17,12 @@ $blue:#0561F5;
 $orange:#E34F00;
 
 
+
 body {
   background: #F7F7F7;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 10px;
   font-family: Beary,
     sans-serif;
   @include fontSize(15);
@@ -28,35 +30,195 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  flex-flow:wrap;
+  justify-content: space-between;
 }
 a, p span {
   color: $orange;
 
 }
+a.base{
+  padding: 3px 25px;
+  display: inherit;
+  width: fit-content;
+  border: 4px solid $blue;
+  border-radius: 34px;
+  margin-top: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: CreamySugar;
+  color: $red;
+  @include fontSize(38);
+  position: relative;
+  left: -10px;
+
+}
+.base::before {
+  content: url(./sources/arrow.svg);
+  margin-right: 10px;
+  position: relative;
+  top: -3px;
+}
+img {
+  max-width: 100%;
+}
+h1 {
+   @include fontSize(65);
+   color: $red;
+   font-family: CreamySugar,
+   sans-serif;
+   font-weight: 400;
+   text-transform: uppercase;
+   margin: 0;
+ }
+
+
+ h2 {
+    @include fontSize(38);
+    color: $red;
+    font-family: CreamySugar,
+    sans-serif;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  h3 {
+     @include fontSize(15);
+     color: black;
+     font-family: Beary,
+     sans-serif;
+     font-weight: 400;
+     margin: 0;
+   }
 
 header {
-  display: flex;
+  @extend .flex;
   position: fixed;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  top: 25px;
   z-index: 1;
-  width: calc(100% - 40px);
-  justify-content: space-between;
+  width: calc(100% - 60px);
+  // justify-content: space-between;
   align-items: center;
-  margin: 0 30px;
   font-family: CreamySugar,
   sans-serif;
   a {
     color: $red;
     text-decoration: none;
     @include fontSize(38);
+    min-width: 355px;
+    width: 25%;
 
   }
   nav {
     width: 30%;
-    display: flex;
-    justify-content: space-between;
+    @extend .flex;
     a {
       @include fontSize(28);
+      min-width: 0;
 
+    }
+  }
+  .divider {
+    width: 35%;
+    border-bottom: 4px solid $blue;
+    margin: 0 20px; 
+  }
+
+}
+
+//main 
+//intro
+.intro {
+  font-family: Beary,
+    sans-serif;
+  color: black;
+  @include fontSize(68);
+  margin:25vh 0;
+  margin-left: 5%;
+  text-transform: none;
+}
+main {
+
+  padding: 0 10px;
+}
+.aboutText {
+  width: 55%;
+  margin-left: auto;
+}
+
+//works Header
+.worksHeader {
+  margin: 5vh 0;
+  h2 {
+    transform: rotate(-27deg);
+    position: relative;
+    bottom: -12vh;
+    left: -1%;
+    width: fit-content;
+  }
+  svg {
+    width: 85%;
+  }
+  h3 {
+    width: fit-content;
+    margin-left: auto;
+    transform: rotate(53deg);
+    position: relative;
+    left: -18%;
+    bottom: 12vh;
+  }
+}
+
+//single projects
+.singleProjectContainer {
+  @extend .flex;
+  margin: 50px 0;
+  .projectDetails {
+    h1 {
+      text-shadow: 12px 11px 4px #0561F5;
+      border-bottom: 4px solid $blue;
+      width: fit-content;
+      max-width: 250px;
+    }
+    h3 {
+      margin: 50px 0;
+      max-width: 250px;
+    }
+    width: 35%;
+  }
+  .primaryImages {
+    width: 62%;
+    img:nth-child(2) {
+      transform: rotate(-18deg);
+      max-width: 200px;
+      position: relative;
+      top: -10%;
+      margin-bottom:-20px;
+      filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
+  .additionalDetails {
+    @extend .flex;
+    width: 100%;
+    .video {
+      width: 35%;
+      margin-top: 22px;
+      span {
+        color: black;
+        margin: 20px 0;
+        display: inherit;
+      }
+    }
+    .detailsText {
+      width: 62%;
     }
   }
 

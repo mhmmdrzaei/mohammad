@@ -12,6 +12,7 @@ const Navigation = () => {
   		<Link to="/">
   			Mohammad Rezaei
   		</Link>
+      <div className="divider" />
       <nav>
         <Link to="/#about">About </Link>
         <Link to="/#works">Works</Link>

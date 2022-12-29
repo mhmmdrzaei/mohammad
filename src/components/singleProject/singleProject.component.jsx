@@ -18,7 +18,7 @@ const SingleProject = ({data})=> {
 		<div className="singleProjectContainer">
 			<div className="projectDetails">
 				<h1>{data.name}</h1>
-				<p>{data.job_type}</p>
+				<h3>{data.job_type}</h3>
 				<LinkButton data={data.web_adress} type="base" text="Visit Site!" />
 			</div>
 			<div className="primaryImages">

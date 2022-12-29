@@ -1,7 +1,7 @@
 const HeaderInfo = ({siteHeader})=> {
 	return (
 
-		<h1>{siteHeader}</h1>
+		<h1 className="intro">{siteHeader} </h1>
 		)
 }
 

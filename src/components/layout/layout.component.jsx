@@ -1,4 +1,3 @@
-import Header from '../header/header.component.jsx';
 import Footer from '../footer/footer.component.jsx';
 
 const Layout = ({children})=> {
