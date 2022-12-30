@@ -9,15 +9,17 @@ const Navigation = () => {
   return (
   	<>
   	<header>
-  		<Link to="/">
-  			Mohammad Rezaei
-  		</Link>
+    <div className="headerInner">
+      <Link to="/">
+        Mohammad Rezaei
+      </Link>
       <div className="divider" />
       <nav>
         <Link to="/#about">About </Link>
         <Link to="/#works">Works</Link>
-        <Link to="#contanct">Contact</Link>
+        <Link to="#contact">Contact</Link>
       </nav>
+    </div>
   	</header>
   	<Outlet /> 
   	</>

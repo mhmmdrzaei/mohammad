@@ -9,11 +9,11 @@ const Works = ()=> {
 	return (
 
 		<Layout>
-		    <HeaderInfo siteHeader={data.site_header} />
 		    <WorksHeader works={data.works_header} />
 		    {
 		    	data.portfolio.map((single)=>(<SingleProject key={single.id} data={single}/>))
 		    }
+
 		</Layout>
 		)
 }

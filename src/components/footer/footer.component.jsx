@@ -1,4 +1,6 @@
 import SITE_DATA from '../../sources/sitedata.sources.jsx'
+import { ReactComponent as GY } from '../../sources/guy.svg';
+import { ReactComponent as Line } from '../../sources/footer.svg';
 
 const Footer = () => {
 
@@ -8,16 +10,18 @@ const Footer = () => {
 
 	return (
 
-		<footer> 
+		<footer id="contact"> 
 		<nav>
-		<h1>ways to make contact</h1>
+		<h2>ways to contact</h2>
 			{
 				contact.map(({id,title,url})=>(<a href={url} key={id} target="_blank">{title}</a>))
 			}	
 		</nav>
 		<div className="email">
 			<div className="emailVisual">
-				
+				<GY className="guySVG"/>
+				<Line className="footerArrow"/>
+
 			</div>
 			<h4>I prefer email:</h4>
 			<a href={`mailto:${email_address}`}>info(at)mohammadrezaei(dot)com</a>

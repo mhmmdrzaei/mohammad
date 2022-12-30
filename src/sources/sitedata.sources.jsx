@@ -44,7 +44,7 @@ const SITE_DATA ={
       { id: 5, 
         name: 'X in Residence',
         job_type:'Web Development & Design',
-        web_img:'https://mohammadrezaei.com/siteImages/missed-connection-1024x624.png',
+        web_img:'https://mohammadrezaei.com/siteImages/x-ir-desktop.png',
         mobile_img:'https://mohammadrezaei.com/siteImages/xir-mobile.jpg',
         image_five:'https://mohammadrezaei.com/siteImages/xirlogo.png',
         image_five_caption:'X-IR logo designed by Saam Keshmiri',
