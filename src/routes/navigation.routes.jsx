@@ -2,9 +2,8 @@
 import { Outlet, Link } from 'react-router-dom';
 
 
-
-
 const Navigation = () => {
+ 
  
   return (
   	<>
@@ -15,9 +14,9 @@ const Navigation = () => {
       </Link>
       <div className="divider" />
       <nav>
-        <Link to="/#about">About </Link>
-        <Link to="/#works">Works</Link>
-        <Link to="#contact">Contact</Link>
+        <Link onClick={() => window.location.replace("/#about")}>About </Link>
+        <Link onClick={() => window.location.replace("/#works")}>Works</Link>
+        <Link onClick={() => window.location.replace("#contact")}>Contact</Link>
       </nav>
     </div>
   	</header>

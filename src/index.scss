@@ -20,6 +20,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 body {
   background: #F7F7F7;
   font-family: Beary,
@@ -29,8 +30,8 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: pointer;
 }
+
 
 .flex {
   display: flex;
@@ -146,15 +147,28 @@ header {
 }
 
 //main 
+@keyframes play {
+  0% {opacity: 0;}
+  100% { opacity: 1 }
+}
+
+.animation {
+animation: play 3s ;
+// animation-iteration-count: 1;
+
+}
+
 //intro
 .intro {
   font-family: Beary,
     sans-serif;
   color: black;
   @include fontSize(68);
-  margin:25vh 0;
+  margin:25vh 0 15vh;
   margin-left: 5%;
   text-transform: none;
+  // opacity: 0;
+  @extend .animation;
 }
 main {
   max-width: 1200px;
@@ -164,6 +178,7 @@ main {
 }
 .aboutText {
   width: 55%;
+  padding-top: 10vh;
   margin-left: auto;
 }
 
@@ -177,9 +192,18 @@ main {
     left: -1%;
     width: fit-content;
   }
-  svg {
+
+  .worksSVG {
     width: 85%;
+}
+
+
+@keyframes move {
+  100% {
+      stroke-dashoffset: 0;
   }
+}
+  
   h3 {
     width: fit-content;
     margin-left: auto;
@@ -256,18 +280,19 @@ main {
 .moreInfo {
   background: $blue;
   left: 0;
-  height: 30vh;
+  // height: 30vh;
   padding: 50px;
   a {
     display: block;
     @extend .base;
     background: white;
     border: 4px solid black;
-    margin: 30px auto 0 ;
+    margin: 0 auto ;
   }
   a:nth-child(2) {
     @include fontSize(23);
     padding: 20px;
+    margin: 30px auto 0;
   }
 }
 
@@ -310,7 +335,7 @@ footer {
 }
 //musicVideo
 .musicVideoInfo {
-  margin: 25vh 0 50px;
+  margin: 5vh 0 50px;
   .musicVideoText {
     width: 55%;
     margin-left: auto;
