@@ -1,6 +1,7 @@
 import SITE_DATA from '../../sources/sitedata.sources.jsx'
 import { ReactComponent as GY } from '../../sources/guy.svg';
 import { ReactComponent as Line } from '../../sources/footer.svg';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Footer = () => {
 
@@ -18,11 +19,15 @@ const Footer = () => {
 			}	
 		</nav>
 		<div className="email">
+		<AnimationOnScroll animateIn='animate__jello' duration={5} >
 			<div className="emailVisual">
+			
 				<GY className="guySVG"/>
+			
 				<Line className="footerArrow"/>
 
 			</div>
+			</AnimationOnScroll>
 			<h4>I prefer email:</h4>
 			<a href={`mailto:${email_address}`}>info(at)mohammadrezaei(dot)com</a>
 		</div>

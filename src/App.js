@@ -4,6 +4,7 @@ import Works from './routes/works.routes.jsx'
 import MusicVideos from './routes/videos.routes.jsx'
 import Navigation from './routes/navigation.routes.jsx'
 import { ParallaxProvider } from 'react-scroll-parallax';
+import "animate.css/animate.min.css";
 
 
 function App() {

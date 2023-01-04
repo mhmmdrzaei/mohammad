@@ -1,3 +1,6 @@
+
+
+
 @font-face {
   font-family: 'CreamySugar';
   src: local('CreamySugar'), url(sources/fonts/CreamySugar.ttf) format('ttf');
@@ -184,7 +187,7 @@ main {
 
 //works Header
 .worksHeader {
-  margin: 5vh 0;
+  margin: 10vh 0;
   h2 {
     transform: rotate(-27deg);
     position: relative;
@@ -195,14 +198,10 @@ main {
 
   .worksSVG {
     width: 85%;
+
 }
 
 
-@keyframes move {
-  100% {
-      stroke-dashoffset: 0;
-  }
-}
   
   h3 {
     width: fit-content;
@@ -215,16 +214,26 @@ main {
 }
 
 //single projects
+@keyframes shadow {
+  50% {
+    text-shadow: 12px 11px 4px #0561F5;
+  }
+  100% {
+    text-shadow: 0;
+  }
+}
 .singleProjectContainer {
   @extend .flex;
   margin: 50px 0;
   .projectDetails {
     h1 {
-      text-shadow: 12px 11px 4px #0561F5;
+      text-shadow: 0;
       // border-bottom: 4px solid $blue;
       width: fit-content;
       // max-width: 250px;
+      animation: shadow 3s ease-in-out infinite ;
     }
+
     h3 {
       margin: 50px 0;
       max-width: 250px;
@@ -312,6 +321,7 @@ footer {
   }
   .email {
     text-align: right;
+
     .guySVG {
       margin-right: 20px;
     }
@@ -335,7 +345,7 @@ footer {
 }
 //musicVideo
 .musicVideoInfo {
-  margin: 5vh 0 50px;
+  margin: 10vh 0 50px;
   .musicVideoText {
     width: 55%;
     margin-left: auto;
