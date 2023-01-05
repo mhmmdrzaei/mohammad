@@ -56,13 +56,22 @@ a.base{
   @include fontSize(38);
   position: relative;
   left: -10px;
+  @media screen and (max-width:1095px) {
+    @include fontSize(28);
+  }
+  @media screen and (max-width:700px) {
+    @include fontSize(24);
+  }
 
 }
 .base::before {
   content: url(./sources/arrow.svg);
   margin-right: 10px;
   position: relative;
-  top: -3px;
+  
+  @media screen and (max-width:700px) {
+    top: 0px;
+  }
 }
 img {
   max-width: 100%;
@@ -75,6 +84,9 @@ h1 {
    font-weight: 400;
    text-transform: uppercase;
    margin: 0;
+   @media screen and (max-width:900px) {
+    @include fontSize(48);
+  }
  }
 
 
@@ -85,6 +97,9 @@ h1 {
     sans-serif;
     font-weight: 400;
     margin: 0;
+    @media screen and (max-width:900px) {
+      @include fontSize(30);
+    }
   }
 
   h3 {
@@ -113,7 +128,7 @@ header {
     position: fixed;
     @extend .flex;
     align-items: center;
-    width: 100%;
+    width: 97%;
     max-width: 1200px;
      z-index: 1;
      a {
@@ -122,17 +137,24 @@ header {
      @include fontSize(38);
      min-width: 355px;
      width: 25%;
+     display: inline;
 
     }
     .divider {
-      width: 35%;
+      width: 33%;
       border-bottom: 4px solid $blue;
-      margin: 0 20px; 
+      // margin: 0 20px; 
+      @media screen and (max-width:1095px) {
+        width: 15%;
+      }
     }
 
     nav {
       width: 30%;
       @extend .flex;
+      @media screen and (max-width:1095px) {
+        width: 40%;
+      }
       a {
         @include fontSize(28);
         min-width: 0;
@@ -165,10 +187,13 @@ animation: play 3s ;
   color: black;
   @include fontSize(68);
   margin:25vh 0 2vh;
-  margin-left: 5%;
+  margin-left: 10%;
   text-transform: none;
   // opacity: 0;
   @extend .animation;
+  @media screen and (max-width:1095px) {
+    margin-left: 5%;
+  }
 }
 @keyframes rotate {
   0% {fill: $red }
@@ -197,6 +222,9 @@ main {
   width: 55%;
   padding-top: 10vh;
   margin-left: auto;
+  @media screen and (max-width:700px) {
+    width: 100%;
+  }
 }
 
 //works Header
@@ -253,6 +281,13 @@ main {
       max-width: 250px;
     }
     width: 35%;
+    @media screen and (max-width:830px) {
+      width: 100%;
+      h1, h3 {
+       margin: 5px 0;
+      }
+
+    }
   }
   .primaryImages {
     width: 62%;
@@ -263,6 +298,16 @@ main {
       top: -17%;
       margin-bottom:-80px;
       filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    @media screen and (max-width:830px) {
+      width: 90%;
+      margin: 20px auto 0;
+    }
+    @media screen and (max-width:700px) {
+      img:nth-child(2) {
+        max-width: 120px;
+        margin-bottom: -10px;
+      }
     }
   }
   .additionalDetails {
@@ -280,6 +325,11 @@ main {
     .detailsText {
       width: 62%;
     }
+    @media screen and (max-width:700px) {
+      .video, .detailsText {
+        width: 100%;
+      }
+    }
   }
 
 }
@@ -295,6 +345,15 @@ main {
   }
   a.base {
     margin-left: auto;
+  }
+  @media screen and (max-width:830px) {
+    h1, h3 {
+      text-align: left;
+      margin: 5px 0;
+    }
+    a.base {
+      margin-left: 0;
+    }
   }
 
   }
@@ -316,6 +375,11 @@ main {
     @include fontSize(23);
     padding: 20px;
     margin: 30px auto 0;
+  }
+  @media screen and (max-width:700px) {
+    a:nth-child(2) {
+      @include fontSize(18);
+    }
   }
 }
 
@@ -354,6 +418,25 @@ footer {
       font-family: CreamySugar;
       color: $red;
       @include fontSize(20);
+    }
+  }
+  @media screen and (max-width:700px) {
+    text-align: center;
+    nav {
+      margin: 0 auto;
+      text-align: center;
+    }
+    .email {
+      width: 100%;
+      text-align: center;
+      .emailVisual {
+        display: none;
+      }
+    }
+    .siteCredits span {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;;
     }
   }
 }
