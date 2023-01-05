@@ -15,9 +15,8 @@ const Home = ()=> {
 	return (
 		<>
 		<main>
-			<Parallax speed={-20} translateX={[100, -100, 'easeInOut']} opacity={[4, 2, 'easeInOut']}  >
+
 			<HeaderInfo siteHeader={data.site_header} />
-			</Parallax>
 		    <Parallax speed={0} opacity={[2, 0, 'easeInOut']} >
 		    <About about={data.about_text}/>
 			</Parallax>

@@ -1,7 +1,28 @@
+import { ReactComponent as Smiley } from '../../sources/smiley.svg';
+import { Parallax } from 'react-scroll-parallax';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 const HeaderInfo = ({siteHeader})=> {
 	return (
+		<>
+		<Parallax speed={-20} translateX={[100, -100, 'easeInOut']} opacity={[4, 2, 'easeInOut']}  >
+			<h1 className="intro">{siteHeader} </h1>
+		
+		</Parallax>
+		<div className='smileyParent'>	
+		<Parallax
+		rotate={[-100, 360]}
+		>
+				
 
-		<h1 className="intro">{siteHeader} </h1>
+				
+				<Smiley className='smileySVG' />
+				
+		</Parallax>
+		</div>
+	
+	
+		</>
+		
 		)
 }
 
