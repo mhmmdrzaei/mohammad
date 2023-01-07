@@ -59,7 +59,7 @@ a.base{
   text-transform: uppercase;
   font-family: CreamySugar;
   color: $red;
-  @include fontSize(38);
+  @include fontSize(30);
   position: relative;
   left: -10px;
   @media screen and (max-width:1095px) {
@@ -91,7 +91,7 @@ img {
   max-width: 100%;
 }
 h1 {
-   @include fontSize(65);
+   @include fontSize(55);
    color: $red;
    font-family: CreamySugar,
    sans-serif;
@@ -99,16 +99,16 @@ h1 {
    text-transform: uppercase;
    margin: 0;
    @media screen and (max-width:900px) {
-    @include fontSize(48);
+    @include fontSize(45);
   }
   @media screen and (max-width:600px) {
-    @include fontSize(35);
+    @include fontSize(32);
   }
  }
 
 
  h2 {
-    @include fontSize(38);
+    @include fontSize(32);
     color: $red;
     font-family: CreamySugar,
     sans-serif;
@@ -120,14 +120,14 @@ h1 {
   }
 
   h3 {
-     @include fontSize(15);
+     @include fontSize(14);
      color: black;
      font-family: Beary,
      sans-serif;
      font-weight: 400;
      margin: 0;
      @media screen and (max-width:600px) {
-      @include fontSize(13);
+      @include fontSize(12);
     }
    }
 
@@ -159,17 +159,17 @@ header {
      a {
      color: $red;
      text-decoration: none;
-     @include fontSize(38);
+     @include fontSize(30);
      min-width: 355px;
      width: 25%;
      display: inline;
      @media screen and (max-width:880px) {
-      @include fontSize(35);
+      @include fontSize(30);
       
 
     }
     @media screen and (max-width:500px) {
-      @include fontSize(25);
+      @include fontSize(23);
       min-width: 200px;
       width: fit-content;
     
@@ -181,13 +181,13 @@ header {
       font-family: CreamySugar, sans-serif;
       background: transparent;
       border: none;
-      @include fontSize(25);
+      @include fontSize(23);
       color:$blue;
       @media screen and (max-width:880px) {
         display: block;
       }
       @media screen and (max-width:500px) {
-        @include fontSize(20);
+        @include fontSize(18);
       }
 
     }
@@ -249,52 +249,34 @@ animation: play 3s ;
 }
 
 //intro
+.introText {
+  width: 100%;
+  
+}
 .intro {
   font-family: Beary,
     sans-serif;
   color: black;
+  max-width: 1000px;
   @include fontSize(68);
-    margin:25vh 0 2vh 2vw;
+
+  margin:8vh 0 2vh 2vw;
   
   text-transform: none;
   // opacity: 0;
   @extend .animation;
-  @media screen and (min-width:1111px) {
-    // margin-left: 13vw;
-  }
-  @media screen and (max-width:1110px) {
-    // margin-left: vw;
-    // @include fontSize(60);
-    margin:19vh 0 2vh 2vw;
-    font-size: 12vw;
-  }
-  @media screen and (max-width:1030px) {
-    // margin-left: 15vw;
-    // @include fontSize(55);
-  }
-
-
   @media screen and (max-width:850px) {
-    // margin-left: 15vw;
-    // font-size: 12vw;
-    margin:25vh 0 2vh 2vw;
+    // margin-left: 13vw;
+    font-size: 13vw;
+    margin:20vh 0 2vh 2vw;
+    // max-width: 100vh;
+    
   }
-  @media screen and (max-width:650px) {
-    // margin-left: 5%;
-    margin:30vh 0 2vh 2vw;
-  }
-  @media screen and (max-width:500px) {
-    // margin-left: 5%;
-    margin:30vh 0 2vh 2vw;
-    // @include fontSize(40);
-  }
-  @media screen and (max-width:350px) {
-    // margin-left: 12%;
-    // @include fontSize(35);
-  }
-  @media screen and (max-width:330px) {
-    // margin-left: 12%;
-    // @include fontSize(32);
+  @media screen and (max-width:550px) {
+    // margin-left: 13vw;
+    font-size: 17vw;
+    // max-width: 100vh;
+    
   }
   
 }
@@ -322,7 +304,7 @@ main {
   padding:20px;
 }
 .aboutText {
-  width: 55%;
+  width: 65%;
   padding: 10vh 0;
   margin-left: auto;
   @media screen and (max-width:800px) {

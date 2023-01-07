@@ -1,5 +1,4 @@
 import { ReactComponent as Wrks } from '../../sources/works.svg';
-import { Parallax } from 'react-scroll-parallax';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
   
 

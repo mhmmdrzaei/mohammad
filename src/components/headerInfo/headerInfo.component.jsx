@@ -3,10 +3,12 @@ import { Parallax } from 'react-scroll-parallax';
 const HeaderInfo = ({siteHeader})=> {
 	return (
 		<>
-		<Parallax rotateX={[360, -360, 'easeInOut']}  >
-			<h1 className="intro">{siteHeader} </h1>
-		
-		</Parallax>
+			<div className="introText">
+			<Parallax translateY={[100, -100, 'easeInOut']} >
+				<h1 className="intro">{siteHeader} </h1>
+			</Parallax>
+			</div>
+
 		<div className='smileyParent'>	
 		<Parallax
 		rotate={[-100, 360]}
