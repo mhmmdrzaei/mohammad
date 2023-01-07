@@ -12,7 +12,7 @@ const SITE_DATA ={
         video_caption:'SVG animation featured on the site',
         image_four:'https://mohammadrezaei.com/siteImages/ccvideo_cover.jpg',
         web_adress: 'https://coopercolegallery.com/',
-        description: '<p>Cooper Cole is one of the most prominent commercial art galleries in Canada.</p><p>For Cooper Cole, I worked with a designer, and together we developed a new branding strategy for the organization, including new logo, all new design assets and guidelines.</p><p>I developed the organization’s new website by building a custom themed Wordpress back end. </p> '
+        description: '<p>Cooper Cole is one of the prominent commercial art galleries in Canada.</p><p>For Cooper Cole, I worked with a designer, and together we developed a new branding strategy for the organization, including new logo, all new design assets and guidelines.</p><p>I developed the organization’s new website by building a custom themed Wordpress back end. </p> '
       },
       { id: 2, 
         name: 'Trinity Square Video',

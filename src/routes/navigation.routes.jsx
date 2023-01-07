@@ -5,7 +5,10 @@ import {useState} from 'react';
 
 const Navigation = () => {
  
- 
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen)
+  }
   return (
   	<>
   	<header>
@@ -14,7 +17,8 @@ const Navigation = () => {
         Mohammad Rezaei
       </Link>
       <div className="divider" />
-      <nav>
+      <button onClick={handleToggle} className="mobileMenu">{navbarOpen ? "Close" : "Menu"}</button>
+      <nav className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
         <Link onClick={() => window.location.replace("/#about")}>About </Link>
         <Link onClick={() => window.location.replace("/#works")}>Works</Link>
         <Link onClick={() => window.location.replace("#contact")}>Contact</Link>

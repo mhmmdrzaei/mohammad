@@ -19,17 +19,23 @@ $orange:#E34F00;
 html {
     scroll-behavior: smooth;
 }
-
+img {
+  max-width: 100%;
+}
 
 body {
   background: #F7F7F7;
   font-family: Beary,
     sans-serif;
+  margin: 0;
   @include fontSize(15);
   color: $blue;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @media screen and (max-width:600px) {
+    @include fontSize(12);
+  }
 }
 
 
@@ -62,6 +68,11 @@ a.base{
   @media screen and (max-width:700px) {
     @include fontSize(24);
   }
+  @media screen and (max-width:600px) {
+    @include fontSize(20);
+    padding:8px 22px;
+    left: 0;
+  }
 
 }
 .base::before {
@@ -71,6 +82,9 @@ a.base{
   
   @media screen and (max-width:700px) {
     top: 0px;
+  }
+  @media screen and (max-width:600px) {
+   display: none;
   }
 }
 img {
@@ -86,6 +100,9 @@ h1 {
    margin: 0;
    @media screen and (max-width:900px) {
     @include fontSize(48);
+  }
+  @media screen and (max-width:600px) {
+    @include fontSize(35);
   }
  }
 
@@ -109,6 +126,9 @@ h1 {
      sans-serif;
      font-weight: 400;
      margin: 0;
+     @media screen and (max-width:600px) {
+      @include fontSize(13);
+    }
    }
 
 header {
@@ -128,9 +148,14 @@ header {
     position: fixed;
     @extend .flex;
     align-items: center;
-    width: 97%;
+    width: 94%;
+    top: 10px;
     max-width: 1200px;
      z-index: 1;
+     @media screen and (max-width:500px) {
+      width: 90%;
+    
+    }
      a {
      color: $red;
      text-decoration: none;
@@ -138,6 +163,32 @@ header {
      min-width: 355px;
      width: 25%;
      display: inline;
+     @media screen and (max-width:880px) {
+      @include fontSize(35);
+      
+
+    }
+    @media screen and (max-width:500px) {
+      @include fontSize(25);
+      min-width: 200px;
+      width: fit-content;
+    
+    }
+
+    }
+    .mobileMenu {
+      display: none;
+      font-family: CreamySugar, sans-serif;
+      background: transparent;
+      border: none;
+      @include fontSize(25);
+      color:$blue;
+      @media screen and (max-width:880px) {
+        display: block;
+      }
+      @media screen and (max-width:500px) {
+        @include fontSize(20);
+      }
 
     }
     .divider {
@@ -146,6 +197,9 @@ header {
       // margin: 0 20px; 
       @media screen and (max-width:1095px) {
         width: 15%;
+      }
+      @media screen and (max-width:880px) {
+        display: none;
       }
     }
 
@@ -159,7 +213,21 @@ header {
         @include fontSize(28);
         min-width: 0;
         width: fit-content;
+        @media screen and (max-width:500px) {
+          @include fontSize(20);
+        }
 
+      }
+      @media screen and (max-width:880px) {
+        display: none;
+      }
+    }
+    .showMenu {
+      display: block;
+      width: 100%;
+      margin-left: auto;
+      a {
+        margin-right: 10px;
       }
     }
   }
@@ -186,14 +254,49 @@ animation: play 3s ;
     sans-serif;
   color: black;
   @include fontSize(68);
-  margin:25vh 0 2vh;
-  margin-left: 10%;
+    margin:25vh 0 2vh 2vw;
+  
   text-transform: none;
   // opacity: 0;
   @extend .animation;
-  @media screen and (max-width:1095px) {
-    margin-left: 5%;
+  @media screen and (min-width:1111px) {
+    // margin-left: 13vw;
   }
+  @media screen and (max-width:1110px) {
+    // margin-left: vw;
+    // @include fontSize(60);
+    margin:19vh 0 2vh 2vw;
+    font-size: 12vw;
+  }
+  @media screen and (max-width:1030px) {
+    // margin-left: 15vw;
+    // @include fontSize(55);
+  }
+
+
+  @media screen and (max-width:850px) {
+    // margin-left: 15vw;
+    // font-size: 12vw;
+    margin:25vh 0 2vh 2vw;
+  }
+  @media screen and (max-width:650px) {
+    // margin-left: 5%;
+    margin:30vh 0 2vh 2vw;
+  }
+  @media screen and (max-width:500px) {
+    // margin-left: 5%;
+    margin:30vh 0 2vh 2vw;
+    // @include fontSize(40);
+  }
+  @media screen and (max-width:350px) {
+    // margin-left: 12%;
+    // @include fontSize(35);
+  }
+  @media screen and (max-width:330px) {
+    // margin-left: 12%;
+    // @include fontSize(32);
+  }
+  
 }
 @keyframes rotate {
   0% {fill: $red }
@@ -220,16 +323,16 @@ main {
 }
 .aboutText {
   width: 55%;
-  padding-top: 10vh;
+  padding: 10vh 0;
   margin-left: auto;
-  @media screen and (max-width:700px) {
+  @media screen and (max-width:800px) {
     width: 100%;
   }
 }
 
 //works Header
 .worksHeader {
-  margin: 10vh 0;
+  margin: 0vh 0 10vh;
   h2 {
     transform: rotate(-27deg);
     position: relative;
@@ -237,13 +340,10 @@ main {
     left: -1%;
     width: fit-content;
   }
-
   .worksSVG {
     width: 85%;
 
-}
-
-
+  }
   
   h3 {
     width: fit-content;
@@ -253,6 +353,25 @@ main {
     left: -18%;
     bottom: 12vh;
   }
+  @media screen and (max-width:500px) {
+    h2 {
+      bottom: -10vh;
+      left: -2%;
+    }
+    .worksSVG {
+      width: 100%;
+    }
+    h3 {
+
+      left: 0;
+      bottom: 11vh;
+    }
+  }
+
+
+}
+.spacer {
+  margin-top: 10vh;
 }
 
 //single projects
@@ -306,7 +425,8 @@ main {
     @media screen and (max-width:700px) {
       img:nth-child(2) {
         max-width: 120px;
-        margin-bottom: -10px;
+        margin-bottom: -20px;
+        left: 7%;
       }
     }
   }
@@ -347,6 +467,11 @@ main {
     margin-left: auto;
   }
   @media screen and (max-width:830px) {
+    flex-direction: row;
+    img:nth-child(2) {
+      transform: rotate(18deg);
+      left: 55%;
+    }
     h1, h3 {
       text-align: left;
       margin: 5px 0;
@@ -379,6 +504,7 @@ main {
   @media screen and (max-width:700px) {
     a:nth-child(2) {
       @include fontSize(18);
+      padding: 8px 22px;
     }
   }
 }
@@ -442,11 +568,25 @@ footer {
 }
 //musicVideo
 .musicVideoInfo {
-  margin: 10vh 0 50px;
+  margin: 12vh 0 50px;
   .musicVideoText {
     width: 55%;
     margin-left: auto;
   }
+  @media screen and (max-width:922px) {
+     svg {
+      width: 100%;
+     }
+
+  }
+  @media screen and (max-width:700px) {
+
+    h2 {
+     @include fontSize(22);
+     position: relative;
+      top: 7vh;
+    }
+ }
 }
 .responsive {
   position: relative;

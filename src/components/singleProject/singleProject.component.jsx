@@ -22,7 +22,7 @@ const SingleProject = ({data})=> {
 			<AnimationOnScroll animateIn>
 				<h1>{data.name}</h1>
 			</AnimationOnScroll>
-			<AnimationOnScroll animateIn='animate__fadeInUp'>
+			<AnimationOnScroll animateIn='animate__fadeInUp' >
 			<h3>{data.job_type}</h3>
 			</AnimationOnScroll>
 			<AnimationOnScroll animateIn='animate__swing'>
@@ -41,25 +41,25 @@ const SingleProject = ({data})=> {
 				{data.video ? (
 					<div className="additionalDetails">
 					<div className="video">
-					<AnimationOnScroll animateIn='animate__bounceInLeft' duration="2">
+					<AnimationOnScroll animateIn='animate__bounceInLeft' duration="2" >
 						<VideoJS options={videoJsOptions} />
 						<span>{data.video_caption}</span>
 					</AnimationOnScroll>
 					</div>
 					
 					<div className="detailsText">
-					<AnimationOnScroll animateIn='animate__bounceInRight' duration="2">
+					
 					{ ReactHtmlParser (data.description) }
-					</AnimationOnScroll>
+					
 					</div>
 					
 					
 					</div>
 				) : (
 					<div className="detailsTextFull">
-						<AnimationOnScroll animateIn='animate__bounceInLeft'duration="2">
+						
 						{ ReactHtmlParser (data.description) }
-						</AnimationOnScroll>
+						
 						
 					</div>
 				  

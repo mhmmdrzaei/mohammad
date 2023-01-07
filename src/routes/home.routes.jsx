@@ -7,7 +7,6 @@ import MoreInfo from '../components/moreInfo/moreInfo.component.jsx'
 import Footer from '../components/footer/footer.component.jsx';
 import { Parallax } from 'react-scroll-parallax';
 
-console.log(SITE_DATA);
 const Home = ()=> {
 	const data = SITE_DATA;
 
