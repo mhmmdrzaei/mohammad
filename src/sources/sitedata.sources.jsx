@@ -8,7 +8,7 @@ const SITE_DATA ={
         job_type:'Web Development, branding & design',
         web_img:'https://mohammadrezaei.com/siteImages/cooper-cole-1024x624.png',
         mobile_img:'https://mohammadrezaei.com/siteImages/cc-truck.jpg',
-        video:'https://mohammadrezaei.com/siteImages/cc_svg_animation.webm',
+        video:'https://mohammadrezaei.com/siteImages/cc_svg_animation.mp4',
         video_caption:'SVG animation featured on the site',
         image_four:'https://mohammadrezaei.com/siteImages/ccvideo_cover.jpg',
         web_adress: 'https://coopercolegallery.com/',
@@ -19,11 +19,11 @@ const SITE_DATA ={
         job_type:'Web Development',
         web_img:'https://mohammadrezaei.com/siteImages/trinity-square-video-1024x624.png',
         mobile_img:'https://mohammadrezaei.com/siteImages/tsv-mobile.jpg',
-        video:'https://mohammadrezaei.com/siteImages/access_widget_tsv.webm',
+        video:'https://mohammadrezaei.com/siteImages/access_widget_tsv.mp4',
         video_caption:'Custom Accessibility Widget developed for client',
         image_four: 'https://mohammadrezaei.com/siteImages/tsv-access-widget-sc-shot.jpg',
         web_adress: 'https://www.trinitysquarevideo.com/',
-        description: '<p>I was hired by a creative agency to build Trinity Square Video’s new website. </p><p>The website redesign focused on archiving the organization’s extensive activities throughout the past decades of operation, while highlighting all of the services and programming currently offered. </p><p>In addition to the website information structure, we worked with the organization to incorporate their rental services software using their API to pull in all the assets. We also came up with a new more user friendly way to display upcoming workshops and activities and pulling information on how to take part.  </p> '
+        description: '<p>I was hired by an agency to build Trinity Square Video’s new website. </p><p>The website redesign focused on archiving the organization’s extensive activities throughout the past decades of operation, while highlighting all of the services and programming currently offered. </p><p>In addition to the website information structure, we worked with the organization to incorporate their rental services software using their API to pull in all the assets. We also came up with a new more user friendly way to display upcoming workshops and activities and pulling information on how to take part.  </p> '
       },
       { id: 3, 
         name: 'Peripheral Review',

@@ -1,12 +1,22 @@
 @font-face {
   font-family: 'CreamySugar';
-  src: local('CreamySugar'), url(sources/fonts/CreamySugar.ttf) format('ttf');
+  src: url('sources/fonts/creamysugar-webfont.woff2') format('woff2'),
+       url('sources/fonts/creamysugar-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 @font-face {
   font-family: 'Beary';
-  src: local('Beary'), url(sources/fonts/Beary.ttf) format('ttf');
+  src: url('sources/fonts/beary-webfont.woff2') format('woff2'),
+       url('sources/fonts/beary-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
+
+
 
 @mixin fontSize($sizeValue){
     font-size: $sizeValue * 1px;
@@ -257,10 +267,37 @@ animation: play 3s ;
   font-family: Beary,
     sans-serif;
   color: black;
-  max-width: 1000px;
+  // max-width: 1000px;
   @include fontSize(68);
 
-  margin:8vh 0 2vh 2vw;
+  margin:15vh 0 2vh 2vw;
+  text-shadow: 
+    3px 3px black, 
+    6px 6px white, 
+    9px 9px black, 
+    12px 12px white, 
+    15px 15px black, 
+    18px 18px white, 
+    21px 21px black, 
+    24px 24px white, 
+    27px 27px black, 
+    30px 30px white, 
+    33px 33px black, 
+    36px 36px white, 
+    39px 39px black, 
+    42px 42px white, 
+    45px 45px black, 
+    48px 48px white, 
+    51px 51px black, 
+    54px 54px white, 
+    57px 57px black, 
+    60px 60px white, 
+    63px 63px black, 
+    66px 66px white, 
+    69px 69px black, 
+    72px 72px white, 
+    75px 75px black;
+  animation: sandwich 2.5s cubic-bezier(0.5, 2, 0.5, 0.75);
   
   text-transform: none;
   // opacity: 0;
@@ -268,7 +305,7 @@ animation: play 3s ;
   @media screen and (max-width:850px) {
     // margin-left: 13vw;
     font-size: 13vw;
-    margin:20vh 0 2vh 2vw;
+    // margin:15vh 0 2vh 2vw;
     // max-width: 100vh;
     
   }
@@ -276,9 +313,32 @@ animation: play 3s ;
     // margin-left: 13vw;
     font-size: 17vw;
     // max-width: 100vh;
+    text-shadow: 
+    3px 3px black, 
+    6px 6px white, 
+    9px 9px black, 
+    12px 12px white, 
+    15px 15px black, 
+    18px 18px white, 
+    21px 21px black, 
+    24px 24px white, 
+    27px 27px black, 
+    30px 30px white, 
+    33px 33px black, 
+    36px 36px white, 
+    39px 39px black, 
+    42px 42px white;
     
   }
   
+}
+
+@keyframes sandwich {
+  0% { color: black; }
+  25% { color: black; text-shadow: -3px 3px black, -6px 6px white, -9px 9px black, -12px 12px white, -15px 15px black, -18px 18px white, -21px 21px black, -24px 24px white, -27px 27px black, -30px 30px white, -33px 33px black, -36px 36px white, -39px 39px black, -42px 42px white, -45px 45px black, -48px 48px white, -51px 51px black, -54px 54px white, -57px 57px black, -60px 60px white, -63px 63px black, -66px 66px white, -69px 69px black, -72px 72px white, -75px 75px black}
+  50% { color: black; text-shadow: -3px -3px black, -6px -6px white, -9px -9px black, -12px -12px white, -15px -15px black, -18px -18px white, -21px -21px black, -24px -24px white, -27px -27px black, -30px -30px white, -33px -33px black, -36px -36px white, -39px -39px black, -42px -42px white, -45px -45px black, -48px -48px white, -51px -51px black, -54px -54px white, -57px -57px black, -60px -60px white, -63px -63px black, -66px -66px}
+  75% { color: black; text-shadow: 3px -3px black, 6px -6px white, 9px -9px black, 12px -12px white, 15px -15px black, 18px -18px white, 21px -21px black, 24px -24px white, 27px -27px black, 30px -30px white, 33px -33px black, 36px -36px white, 39px -39px black, 42px -42px white, 45px -45px black, 48px -48px white, 51px -51px black, 54px -54px white, 57px -57px black, 60px -60px white, 63px -63px black, 66px -66px white, 69px -69px black, 72px -72px white, 75px -75px black}
+  100% { color: black; }
 }
 @keyframes rotate {
   0% {fill: $red }
@@ -291,6 +351,9 @@ animation: play 3s ;
   position: relative;
   left: calc(100% - 99px - 5%);
   margin-bottom: 10vh;
+  @media screen and (max-width:550px) { 
+    margin-top: 10vh;
+  }
 }
 .smileySVG path {
   fill: $red;
@@ -353,7 +416,7 @@ main {
 
 }
 .spacer {
-  margin-top: 10vh;
+  margin-top: 15vh;
 }
 
 //single projects
@@ -569,6 +632,10 @@ footer {
       top: 7vh;
     }
  }
+}
+.musicVideoContainer {
+  max-width: 850px;
+  margin: 0 auto;
 }
 .responsive {
   position: relative;

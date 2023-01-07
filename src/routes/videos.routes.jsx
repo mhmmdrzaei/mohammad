@@ -27,12 +27,15 @@ const MusicVideos =()=> {
 			</div>
 			
 		</div>
+		<div className="musicVideoContainer">
+		{
+		    	data.music_videos.map((video)=>(<MusicVideo key={video.id} data={video}/>))
+		    }
+		</div>
 
 		
 		   
-		    {
-		    	data.music_videos.map((video)=>(<MusicVideo key={video.id} data={video}/>))
-		    }
+
 		</Layout>
 		)
 }

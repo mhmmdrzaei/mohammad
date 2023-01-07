@@ -12,7 +12,7 @@ const SingleProject = ({data})=> {
 	  fluid: true,
 	  sources: [{
 	    src: `${data.video}`,
-	    type: 'video/webm'
+	    type: 'video/mp4'
 	  }]
 	};
 
