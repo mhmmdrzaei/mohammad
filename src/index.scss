@@ -147,9 +147,6 @@ header {
   margin: 0 auto;
   padding: 0 20px;
   top: 25px;
- 
-  
-  // justify-content: space-between;
   
   font-family: CreamySugar,
   sans-serif;
@@ -158,12 +155,12 @@ header {
     position: fixed;
     @extend .flex;
     align-items: center;
-    width: 94%;
+    width: 96%;
     top: 10px;
     max-width: 1200px;
      z-index: 1;
      @media screen and (max-width:500px) {
-      width: 90%;
+      width: 95%;
     
     }
      a {
@@ -189,10 +186,14 @@ header {
     .mobileMenu {
       display: none;
       font-family: CreamySugar, sans-serif;
-      background: transparent;
+      background: $blue;
       border: none;
       @include fontSize(23);
-      color:$blue;
+      color:$red;
+      padding: 18px 10px;
+      border-radius: 100%;
+      box-shadow: -2px 2px 7px black;
+    
       @media screen and (max-width:880px) {
         display: block;
       }
@@ -236,6 +237,9 @@ header {
       display: block;
       width: 100%;
       margin-left: auto;
+      position: relative;
+      top: -25px;
+      
       a {
         margin-right: 10px;
       }
@@ -297,11 +301,11 @@ animation: play 3s ;
     69px 69px black, 
     72px 72px white, 
     75px 75px black;
-  animation: sandwich 2.5s cubic-bezier(0.5, 2, 0.5, 0.75);
+  animation: sandwich 4.5s cubic-bezier(0.5, 2, 0.5, 0.75);
   
   text-transform: none;
   // opacity: 0;
-  @extend .animation;
+  // @extend .animation;
   @media screen and (max-width:850px) {
     // margin-left: 13vw;
     font-size: 13vw;
@@ -459,8 +463,7 @@ main {
       transform: rotate(-18deg);
       max-width: 200px;
       position: relative;
-      top: -17%;
-      margin-bottom:-80px;
+      top: -10vw;
       filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0.25));
     }
     @media screen and (max-width:830px) {
@@ -470,7 +473,7 @@ main {
     @media screen and (max-width:700px) {
       img:nth-child(2) {
         max-width: 120px;
-        margin-bottom: -20px;
+        // margin-bottom: -20px;
         left: 7%;
       }
     }
@@ -497,6 +500,13 @@ main {
     }
   }
 
+}
+.detailsTextFull, .additionalDetails {
+  position: relative;
+  top: -5vw;
+  @media screen and (max-width:500px) {
+    top: 0px;
+  }
 }
 .singleProjectContainer:nth-child(odd){
   flex-direction: row-reverse;

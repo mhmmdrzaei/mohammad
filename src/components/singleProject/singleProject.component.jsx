@@ -10,6 +10,7 @@ const SingleProject = ({data})=> {
 	  controls: true,
 	  responsive: true,
 	  fluid: true,
+	  poster: `${data.video_sc}`,
 	  sources: [{
 	    src: `${data.video}`,
 	    type: 'video/mp4'
