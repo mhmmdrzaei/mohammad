@@ -22,8 +22,7 @@ const MusicVideos =()=> {
 			</AnimationOnScroll>
 			
 			<div className="musicVideoText">
-				<p>Here is a selection of music videos I’ve made. Working with video is a hobby I take pretty seriously. I really enjoy and am proud of the work. </p>
-				<p>Please enjoy!</p>
+				<p>Here is a selection of music videos I’ve made. This started as a hobby, but has turned into a side project I'm really proud of. </p>
 			</div>
 			
 		</div>

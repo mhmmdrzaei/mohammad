@@ -160,7 +160,7 @@ header {
     max-width: 1200px;
      z-index: 1;
      @media screen and (max-width:500px) {
-      width: 95%;
+      width: 93%;
     
     }
      a {
@@ -198,7 +198,7 @@ header {
         display: block;
       }
       @media screen and (max-width:500px) {
-        @include fontSize(18);
+        @include fontSize(17);
       }
 
     }
@@ -225,7 +225,7 @@ header {
         min-width: 0;
         width: fit-content;
         @media screen and (max-width:500px) {
-          @include fontSize(20);
+          @include fontSize(17);
         }
 
       }
@@ -252,14 +252,66 @@ header {
 
 //main 
 @keyframes play {
-  0% {opacity: 0;}
-  100% { opacity: 1 }
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  
+  }
+  100% { 
+    opacity: 1;
+    text-shadow: 
+    3px 3px black, 
+    6px 6px white, 
+    9px 9px black, 
+    12px 12px white, 
+    15px 15px black, 
+    18px 18px white, 
+    21px 21px black, 
+    24px 24px white, 
+    27px 27px black, 
+    30px 30px white, 
+    33px 33px black, 
+    36px 36px white, 
+    39px 39px black, 
+    42px 42px white, 
+    45px 45px black, 
+    48px 48px white, 
+    51px 51px black, 
+    54px 54px white, 
+    57px 57px black, 
+    60px 60px white, 
+    63px 63px black, 
+    66px 66px white, 
+    69px 69px black, 
+    72px 72px white, 
+    75px 75px black;
+   }
 }
 
-.animation {
-animation: play 3s ;
-// animation-iteration-count: 1;
-
+@keyframes playMobile {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  
+  }
+  100% { 
+    opacity: 1;
+    text-shadow: 
+    3px 3px black, 
+    6px 6px white, 
+    9px 9px black, 
+    12px 12px white, 
+    15px 15px black, 
+    18px 18px white, 
+    21px 21px black, 
+    24px 24px white, 
+    27px 27px black, 
+    30px 30px white, 
+    33px 33px black, 
+    36px 36px white, 
+    39px 39px black, 
+    42px 42px white;
+  }
 }
 
 //intro
@@ -271,7 +323,6 @@ animation: play 3s ;
   font-family: Beary,
     sans-serif;
   color: black;
-  // max-width: 1000px;
   @include fontSize(68);
 
   margin:15vh 0 2vh 2vw;
@@ -301,48 +352,21 @@ animation: play 3s ;
     69px 69px black, 
     72px 72px white, 
     75px 75px black;
-  animation: sandwich 4.5s cubic-bezier(0.5, 2, 0.5, 0.75);
+    animation: play 4.5s cubic-bezier(0.5, 2, 0.5, 0.75); 
   
   text-transform: none;
-  // opacity: 0;
-  // @extend .animation;
   @media screen and (max-width:850px) {
-    // margin-left: 13vw;
+
     font-size: 13vw;
-    // margin:15vh 0 2vh 2vw;
-    // max-width: 100vh;
+
     
   }
   @media screen and (max-width:550px) {
-    // margin-left: 13vw;
+
     font-size: 17vw;
-    // max-width: 100vh;
-    text-shadow: 
-    3px 3px black, 
-    6px 6px white, 
-    9px 9px black, 
-    12px 12px white, 
-    15px 15px black, 
-    18px 18px white, 
-    21px 21px black, 
-    24px 24px white, 
-    27px 27px black, 
-    30px 30px white, 
-    33px 33px black, 
-    36px 36px white, 
-    39px 39px black, 
-    42px 42px white;
     
   }
   
-}
-
-@keyframes sandwich {
-  0% { color: black; }
-  25% { color: black; text-shadow: -3px 3px black, -6px 6px white, -9px 9px black, -12px 12px white, -15px 15px black, -18px 18px white, -21px 21px black, -24px 24px white, -27px 27px black, -30px 30px white, -33px 33px black, -36px 36px white, -39px 39px black, -42px 42px white, -45px 45px black, -48px 48px white, -51px 51px black, -54px 54px white, -57px 57px black, -60px 60px white, -63px 63px black, -66px 66px white, -69px 69px black, -72px 72px white, -75px 75px black}
-  50% { color: black; text-shadow: -3px -3px black, -6px -6px white, -9px -9px black, -12px -12px white, -15px -15px black, -18px -18px white, -21px -21px black, -24px -24px white, -27px -27px black, -30px -30px white, -33px -33px black, -36px -36px white, -39px -39px black, -42px -42px white, -45px -45px black, -48px -48px white, -51px -51px black, -54px -54px white, -57px -57px black, -60px -60px white, -63px -63px black, -66px -66px}
-  75% { color: black; text-shadow: 3px -3px black, 6px -6px white, 9px -9px black, 12px -12px white, 15px -15px black, 18px -18px white, 21px -21px black, 24px -24px white, 27px -27px black, 30px -30px white, 33px -33px black, 36px -36px white, 39px -39px black, 42px -42px white, 45px -45px black, 48px -48px white, 51px -51px black, 54px -54px white, 57px -57px black, 60px -60px white, 63px -63px black, 66px -66px white, 69px -69px black, 72px -72px white, 75px -75px black}
-  100% { color: black; }
 }
 @keyframes rotate {
   0% {fill: $red }

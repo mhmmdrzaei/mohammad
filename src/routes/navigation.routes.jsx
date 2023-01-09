@@ -20,7 +20,7 @@ const Navigation = () => {
       <button onClick={handleToggle} className="mobileMenu">{navbarOpen ? "Close" : "Menu"}</button>
       <nav className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
         <Link onClick={() => window.location.replace("/#about")}>About </Link>
-        <Link onClick={() => window.location.replace("/#works")}>Works</Link>
+        <Link to="/works">Works</Link>
         <Link onClick={() => window.location.replace("#contact")}>Contact</Link>
       </nav>
     </div>
