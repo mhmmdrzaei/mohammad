@@ -16,7 +16,7 @@ const Home = ()=> {
 		<main>
 
 			<HeaderInfo siteHeader={data.site_header} />
-		    <Parallax opacity={[2, 0, 'easeInOut']} >
+		    <Parallax opacity={[4, 0, 'easeInOut']} >
 		    <About about={data.about_text}/>
 			</Parallax>
 		    <WorksHeader works={data.works_header}/>

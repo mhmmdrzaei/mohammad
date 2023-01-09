@@ -19,9 +19,15 @@ const Navigation = () => {
       <div className="divider" />
       <button onClick={handleToggle} className="mobileMenu">{navbarOpen ? "Close" : "Menu"}</button>
       <nav className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-        <Link onClick={() => window.location.replace("/#about")}>About </Link>
-        <Link to="/works">Works</Link>
-        <Link onClick={() => window.location.replace("#contact")}>Contact</Link>
+        <Link onClick={() => {
+         window.location.replace("/#about")
+          handleToggle();
+        }}>About </Link>
+        <Link to="/works" onClick={handleToggle} >Works</Link>
+        <Link onClick={() => {
+          window.location.replace("#contact")
+          handleToggle();
+        } }>Contact</Link>
       </nav>
     </div>
   	</header>

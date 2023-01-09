@@ -14,12 +14,8 @@ const MusicVideos =()=> {
 		<Layout>
 		
 		<div className="musicVideoInfo">
-		<AnimationOnScroll animateIn='animate__bounceInLeft' duration={1.5} >
 			<h2>Music Videos</h2>
-		</AnimationOnScroll>
-			<AnimationOnScroll animateIn='animate__jello' duration={3} >
 			<VideoLine />
-			</AnimationOnScroll>
 			
 			<div className="musicVideoText">
 				<p>Here is a selection of music videos I’ve made. This started as a hobby, but has turned into a side project I'm really proud of. </p>
