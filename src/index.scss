@@ -7,15 +7,6 @@
 
 }
 
-// @font-face {
-//   font-family: 'Beary';
-//   src: url('sources/fonts/beary-webfont.woff2') format('woff2'),
-//        url('sources/fonts/beary-webfont.woff') format('woff');
-//   font-weight: normal;
-//   font-style: normal;
-
-// }
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap');
 
 
@@ -26,7 +17,7 @@
 }
 $red: #FF0123;
 $blue:#0561F5;
-$orange:#E34F00;
+$orange:#C30414;
 
 html {
     scroll-behavior: smooth;
@@ -193,9 +184,9 @@ header {
       display: none;
       font-family: CreamySugar, sans-serif;
       background: $blue;
+      color:#F7F7F7;
       border: none;
       @include fontSize(23);
-      color:$red;
       padding: 18px 10px;
       border-radius: 100%;
       box-shadow: -2px 2px 7px black;
@@ -522,6 +513,9 @@ main {
   .additionalDetails {
     @extend .flex;
     width: 100%;
+    video {
+      width: 100%;
+    }
     .video {
       width: 35%;
       margin-top: 22px;

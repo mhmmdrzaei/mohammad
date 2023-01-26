@@ -1,21 +1,38 @@
 import LinkButton from '../button/button.component.jsx'
-import VideoJS from '../videoJs/videoJs.component.jsx';
+// import VideoJS from '../videoJs/videoJs.component.jsx';
 import ReactHtmlParser from 'react-html-parser'; 
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import {Cloudinary} from "@cloudinary/url-gen";
+import {AdvancedImage, AdvancedVideo} from '@cloudinary/react';
+import {fill} from "@cloudinary/url-gen/actions/resize";
+
+
 
 
 const SingleProject = ({data})=> {
-	const videoJsOptions = {
-	  autoplay: false,
-	  controls: true,
-	  responsive: true,
-	  fluid: true,
-	  poster: `${data.video_sc}`,
-	  sources: [{
-	    src: `${data.video}`,
-	    type: 'video/mp4'
-	  }]
-	};
+		const cld = new Cloudinary({
+			cloud: {
+			cloudName: 'in-search-of'
+			}
+			});
+		
+		const getCloudinaryImage = (imageUrl) => cld.image(imageUrl).resize(fill().width(700));
+		const webImg = getCloudinaryImage(`${data.web_img}`);
+		const mobileImg = getCloudinaryImage(`${data.mobile_img}`);
+		const video = cld.video(`${data.video}`)
+
+
+	// const videoJsOptions = {
+	//   autoplay: false,
+	//   controls: true,
+	//   responsive: true,
+	//   fluid: true,
+	//   poster: `${data.video_sc}`,
+	//   sources: [{
+	//     src: `${data.video}`,
+	//     type: 'video/mp4'
+	//   }]
+	// };
 
 	return (
 		<div className="singleProjectContainer">
@@ -34,8 +51,9 @@ const SingleProject = ({data})=> {
 			</div>
 			<div className="primaryImages">
 			<AnimationOnScroll animateIn='animate__fadeInUp' duration="2">
-				<img src={data.web_img} alt={`${data.name}'s website in a browser frame`} loading="lazy"/></AnimationOnScroll>
-				<img src={data.mobile_img} alt={`${data.name}'s mobile presentation or related to branding`} loading="lazy"/>
+				 <AdvancedImage cldImg={webImg} loading="lazy" alt={`${data.name}'s website in a browser frame`}/>
+			</AnimationOnScroll>
+				<AdvancedImage cldImg={mobileImg} loading="lazy" alt={`${data.name}'s mobile presentation or related to branding`}/>
 			
 			</div>
 			
@@ -43,7 +61,8 @@ const SingleProject = ({data})=> {
 					<div className="additionalDetails">
 					<div className="video">
 					<AnimationOnScroll animateIn='animate__bounceInLeft' duration="2" >
-						<VideoJS options={videoJsOptions} />
+						{/* <VideoJS options={videoJsOptions} /> */}
+						<AdvancedVideo cldVid={video} muted preload cldPoster="auto" controls/>
 						<span>{data.video_caption}</span>
 					</AnimationOnScroll>
 					</div>
