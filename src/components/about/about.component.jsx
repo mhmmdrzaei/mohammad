@@ -5,6 +5,6 @@ const About =({about})=> {
 		<div className="aboutText" id="about">
 		{ ReactHtmlParser (about) }
 		</div>
-		)
+		) 
 }
 export default About
