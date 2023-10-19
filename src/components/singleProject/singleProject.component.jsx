@@ -1,6 +1,6 @@
 import LinkButton from '../button/button.component.jsx'
 // import VideoJS from '../videoJs/videoJs.component.jsx';
-import ReactHtmlParser from 'react-html-parser'; 
+import parse from 'html-react-parser';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {AdvancedImage, AdvancedVideo} from '@cloudinary/react';
@@ -69,7 +69,7 @@ const SingleProject = ({data})=> {
 					
 					<div className="detailsText">
 					
-					{ ReactHtmlParser (data.description) }
+					{ parse (data.description) }
 					
 					</div>
 					
@@ -78,7 +78,7 @@ const SingleProject = ({data})=> {
 				) : (
 					<div className="detailsTextFull">
 						
-						{ ReactHtmlParser (data.description) }
+						{ parse (data.description) }
 						
 						
 					</div>
