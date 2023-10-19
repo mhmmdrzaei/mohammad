@@ -9,7 +9,7 @@ export const BUTTON_TYPE_CLASSES = {
 
 const LinkButton = ({data, type, text})=>  {
 	return (
-		<a href={data} target="_blank" className={`listingEach ${BUTTON_TYPE_CLASSES[type]}`}>{text}</a>
+		<a href={data} target="_blank" rel="noreferrer" className={`listingEach ${BUTTON_TYPE_CLASSES[type]}`}>{text}</a>
 
 		)
 }

@@ -1,9 +1,9 @@
-import ReactHtmlParser from 'react-html-parser'; 
+import parse from 'html-react-parser';
 
 const MusicVideo = ({data})=> {
 	return (
 		<div className="responsive">
-			{ReactHtmlParser(data.embed_link)}
+			{parse(data.embed_link)}
 		</div>		)
 }
 export default MusicVideo;
