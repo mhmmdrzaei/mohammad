@@ -1,9 +1,10 @@
-import ReactHtmlParser from 'react-html-parser'; 
+// import ReactHtmlParser from 'react-html-parser'; 
+import parse from 'html-react-parser';
 const About =({about})=> {
 
 	return (
 		<div className="aboutText" id="about">
-		{ ReactHtmlParser (about) }
+		{ parse (about) }
 		</div>
 		) 
 }

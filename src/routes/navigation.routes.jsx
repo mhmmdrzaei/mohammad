@@ -1,11 +1,14 @@
 
 import { Outlet, Link } from 'react-router-dom';
-
-
+import {useState} from 'react';
 
 
 const Navigation = () => {
  
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen)
+  }
   return (
   	<>
   	<header>
@@ -14,10 +17,17 @@ const Navigation = () => {
         Mohammad Rezaei
       </Link>
       <div className="divider" />
-      <nav>
-        <Link to="/#about">About </Link>
-        <Link to="/#works">Works</Link>
-        <Link to="#contact">Contact</Link>
+      <button onClick={handleToggle} className="mobileMenu">{navbarOpen ? "Close" : "Menu"}</button>
+      <nav className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
+        <Link onClick={() => {
+         window.location.replace("/#about")
+          handleToggle();
+        }}>About </Link>
+        <Link to="/works" onClick={handleToggle} >Works</Link>
+        <Link onClick={() => {
+          window.location.replace("#contact")
+          handleToggle();
+        } }>Contact</Link>
       </nav>
     </div>
   	</header>

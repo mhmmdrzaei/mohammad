@@ -14,12 +14,15 @@ const Footer = () => {
 		<nav>
 		<h2>ways to contact</h2>
 			{
-				contact.map(({id,title,url})=>(<a href={url} key={id} target="_blank">{title}</a>))
+				contact.map(({id,title,url})=>(<a href={url} rel="noreferrer" key={id} target="_blank">{title}</a>))
 			}	
 		</nav>
 		<div className="email">
+
 			<div className="emailVisual">
+			
 				<GY className="guySVG"/>
+			
 				<Line className="footerArrow"/>
 
 			</div>
