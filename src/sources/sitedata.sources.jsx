@@ -50,14 +50,14 @@ const SITE_DATA ={
         web_adress: 'https://x-ir.net/',
         description: '<p>X in Residence is an artist residency centre located in Toronto, Canada.   </p><p>Working with a designer, we developed the branding identity for the organization, as well as the design of the website. The organization wanted a tool to incorporate their application submissions via a form  on to their site. I incorporated this functionality while developing systems in place to track and review the submitted applications through the back end of the website. </p> '
       },
-      { id: 6, 
-        name: 'Bricks & Glitter',
-        job_type:'Web Development',
-        web_img:'mohammadPort/bricks-glitter-1024x624_tifcew',
-        mobile_img:'mohammadPort/bricksglittermobile_sqwmzu',
-        web_adress: 'https://bricks-glitter.com/',
-        description: '<p>Bricks & Glitter is a community organization festival located in Toronto, Canada.  </p><p>I developed the website for the organization with a few goals in mind. As a team, we wanted a place for the users to find information about the festival activities with ease, be able to browse through past activities, and to be able to see the live stream of the festival on the site as it took place. We developed the site information layout through a series of interviews with participants and audiences of the festival. The final site results are simple in demonstration, with a lot of consideration to the festival’s audiences.  </p> '
-      },
+      // { id: 6, 
+      //   name: 'Bricks & Glitter',
+      //   job_type:'Web Development',
+      //   web_img:'mohammadPort/bricks-glitter-1024x624_tifcew',
+      //   mobile_img:'mohammadPort/bricksglittermobile_sqwmzu',
+      //   web_adress: 'https://bricks-glitter.com/',
+      //   description: '<p>Bricks & Glitter is a community organization festival located in Toronto, Canada.  </p><p>I developed the website for the organization with a few goals in mind. As a team, we wanted a place for the users to find information about the festival activities with ease, be able to browse through past activities, and to be able to see the live stream of the festival on the site as it took place. We developed the site information layout through a series of interviews with participants and audiences of the festival. The final site results are simple in demonstration, with a lot of consideration to the festival’s audiences.  </p> '
+      // },
 
 
       ],

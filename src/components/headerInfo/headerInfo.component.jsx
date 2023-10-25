@@ -4,7 +4,7 @@ const HeaderInfo = ({siteHeader})=> {
 	return (
 		<>
 			<div className="introText">
-			<Parallax rotateX={[180, -100, 'easeInOut']} >
+			<Parallax rotateY={[100, -100, 'easeInOut']} >
 				<h1 className="intro">{siteHeader} </h1>
 			</Parallax>
 			</div>
