@@ -62,7 +62,7 @@ const SingleProject = ({data})=> {
 					<div className="video">
 					<AnimationOnScroll animateIn='animate__bounceInLeft' duration="2" >
 						{/* <VideoJS options={videoJsOptions} /> */}
-						<AdvancedVideo cldVid={video} muted preload cldPoster="auto" controls/>
+						<AdvancedVideo cldVid={video} muted loop preload cldPoster="auto" autoPlay no-controls/>
 						<span>{data.video_caption}</span>
 					</AnimationOnScroll>
 					</div>
