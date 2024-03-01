@@ -1,14 +1,14 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router";
 
-const ScrollToTop = (props) => {
+const ScrollBy = (props) => {
   const location = useLocation();
   const wrappedRef = useRef(null);
 
   useEffect(() => {
     const handleClick = () => {
       // Move up by 10 pixels from the current scroll position
-      window.scrollTo(0, 0);
+      window.scrollBy(0, -10);
     };
 
     const wrappedElement = wrappedRef.current;
@@ -26,4 +26,4 @@ const ScrollToTop = (props) => {
   return <div ref={wrappedRef}>{props.children}</div>;
 };
 
-export default ScrollToTop;
+export default ScrollBy;
