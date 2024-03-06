@@ -21,7 +21,7 @@ const Home = ()=> {
 			</Parallax>
 		    <WorksHeader works={data.works_header}/>
 		    {
-		    	data.portfolio.filter((_, idx)=> idx < 3)
+		    	data.portfolio.filter((_, idx)=> idx < 4)
 		    	.map((single)=>(<SingleProject key={single.id} data={single}/>))
 		    }
 		</main>

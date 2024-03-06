@@ -1,7 +1,7 @@
 import { Outlet, Link } from 'react-router-dom';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import ScrollToTop from '../scrollToTop/scrollToTop.component'
-import ScrollBy from '../../scrollBy/scrollBy.component';
+import ScrollBy from '../scrollBy/scrollBy.component';
 
 
 const MoreInfo = ()=> {

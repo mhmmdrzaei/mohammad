@@ -50,7 +50,7 @@ const SingleProject = ({data})=> {
 				
 			</div>
 			<div className="primaryImages">
-			<AnimationOnScroll animateIn='animate__fadeInUp' duration="2">
+			<AnimationOnScroll animateIn='animate__fadeIn' duration="2">
 				 <AdvancedImage cldImg={webImg} loading="lazy" alt={`${data.name}'s website in a browser frame`}/>
 			</AnimationOnScroll>
 				<AdvancedImage cldImg={mobileImg} loading="lazy" alt={`${data.name}'s mobile presentation or related to branding`}/>

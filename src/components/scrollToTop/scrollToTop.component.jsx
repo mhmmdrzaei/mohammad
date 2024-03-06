@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useLocation } from "react-router";
 
 const ScrollToTop = (props) => {
@@ -7,8 +7,14 @@ const ScrollToTop = (props) => {
 
   useEffect(() => {
     const handleClick = () => {
-      // Move up by 10 pixels from the current scroll position
-      window.scrollTo(0, 0);
+      const scrollY = window.scrollY;
+      if (scrollY === 0) {
+        // If the scroll position is at the top, scroll down by 20 pixels
+        window.scrollTo(0, 100);
+      } else {
+        // Otherwise, scroll to the top
+        window.scrollTo(0, 0);
+      }
     };
 
     const wrappedElement = wrappedRef.current;
@@ -27,3 +33,4 @@ const ScrollToTop = (props) => {
 };
 
 export default ScrollToTop;
+

@@ -8,7 +8,7 @@ const ScrollBy = (props) => {
   useEffect(() => {
     const handleClick = () => {
       // Move up by 10 pixels from the current scroll position
-      window.scrollBy(0, -10);
+      window.scrollBy(0, -200);
     };
 
     const wrappedElement = wrappedRef.current;
