@@ -206,11 +206,11 @@ header {
 
     }
     .divider {
-      width: 38%;
+      width: 30%;
       border-bottom: 4px solid $blue;
       // margin: 0 20px; 
       @media screen and (max-width:1095px) {
-        width: 15%;
+        width: 10%;
       }
       @media screen and (max-width:880px) {
         display: none;
@@ -218,20 +218,25 @@ header {
     }
 
     nav {
-      width: 30%;
-      @extend .flex;
-      @media screen and (max-width:1095px) {
-        width: 40%;
+      width: 40%;
+      .navInner {
+        
+        @extend .flex;
+     
       }
+      @media screen and (max-width:1095px) {
+        width: 54%;
+        @media screen and (max-width:500px) {
+          @include fontSize(17);
+        }
+    }
       a {
         @include fontSize(28);
         min-width: 0;
         width: fit-content;
 
 
-        @media screen and (max-width:500px) {
-          @include fontSize(17);
-        }
+
 
 
       }
@@ -242,22 +247,40 @@ header {
       }
 
       @media screen and (max-width:880px) {
+        width: 100%;
         display: none;
+        .navInner {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          a, div {
+            width: 100%;
+          
+            text-align: center;
+        
+          }
+        }
       }
     }
     .showMenu {
       @media screen and (max-width:880px) {
       display: block;
       width: 100%;
-      margin-left: auto;
-      position: relative;
-      top: -25px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: $blue;
+      
       // background: linear-gradient(180deg, rgba(247,247,247,0) 0%, rgba(247,247,247,1) 29%, rgba(247,247,247,1) 48%, rgba(249,249,249,1) 64%, rgba(255,255,255,0) 100%);
 
       
       a {
         margin-right: 10px;
-        text-shadow: 2px 2px 4px whit
+        display: block;
+        text-shadow: 2px 2px 4px white;
       }
 
     }
@@ -710,4 +733,208 @@ footer {
      width: 100%;
      height: 100%;
   }
+}
+
+// shop styles
+
+.shopContainer {
+  margin-top: 80px;
+  position: relative;
+  .modal-window {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #F7F7F7;
+    border:1px solid $red;
+    padding: 30px;
+    min-width: 320px;
+    max-width: 600px;
+    width: 80%;
+  
+  }
+  .showModal {
+    display: block;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .product {
+    @extend .flex;
+    .productImages {
+      width: 58%;
+    }
+    .productInfo {
+      width: 40%;
+    }
+    .btn-primary {
+      background: $red;
+    color: white;
+    border: none;
+    border-radius: none;
+    box-shadow: -2px 2px 7px black;
+    margin: 10px 10px 10px 0;
+    // min-width: 40px;
+    min-height: 30px;
+    padding: 10px 20px 5px 20px;
+    font-family: CreamySugar, sans-serif;
+    @include fontSize(15);
+    }
+    .btn-danger {
+      background: $blue;
+      color: white;
+    border: none;
+    border-radius: none;
+    box-shadow: -2px 2px 7px black;
+    margin: 10px 10px 10px 0;
+    // min-width: 40px;
+    min-height: 30px;
+    padding: 10px 20px 10px 20px;
+    font-weight: 700;
+    // text-transform: uppercase;
+    @include fontSize(8);
+
+    }
+    h1 {
+      font-family: 'Raleway', sans-serif;
+      text-transform: unset;
+      font-weight: 800;
+    }
+    
+    h3 {
+      color:$blue;
+    }
+    p, label{
+      color: black;
+      @include fontSize(10);
+      font-weight: 700;
+    }
+  }
+  @media screen and (max-width:700px) {
+    .product{
+      .productImages, .productInfo {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .productInfo {
+        margin-top: 20px;
+      }
+    }
+    .modal-window {
+      position: fixed;
+     top:0%;
+      left: 0%;
+      width: 90%;
+      height: 100vh;
+      transform: translate(0%, 0%);
+      background: #F7F7F7;
+      border:1px solid $red;
+      padding: 5%;
+      padding-top: 100px;
+      border: none;
+    
+    }
+
+  }
+
+}
+
+.cartbutton, .cartbuttonClose,.btn-sm,.btn-success {
+  background: $red;
+color: white;
+border: none;
+border-radius: none;
+box-shadow: -2px 2px 7px black;
+margin: 10px 10px 10px 0;
+// min-width: 40px;
+min-height: 30px;
+padding: 10px 20px 5px 20px;
+font-family: CreamySugar, sans-serif;
+@include fontSize(15);
+}
+.btn-sm {
+  background: $blue;
+}
+.cartbutton {
+  position: fixed;
+  // left: 88%;
+  background: $blue;
+  bottom: 35px;
+}
+.cartbuttonClose {
+  float: right;
+}
+.cart-empty {
+  margin-top: 100px;
+  text-align: center;
+}
+
+// book componetnt
+.media-container { 
+  &:hover .book {
+      transform: rotateX(5deg) rotateY(-50deg);
+  }
+  
+  &:hover .book-shadow {
+      transform: rotateX(90deg) rotateZ(40deg);
+  }
+}
+.book {
+  position: relative;
+  z-index: 1;
+  max-width: 450px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+  transform: rotateX(0deg) rotateY(-20deg);
+  z-index: -1;
+
+
+  
+  &__front {
+      border-radius: 0;
+      overflow: hidden;
+      transform: translateZ(calc(20px));
+  }
+  
+  &__back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background: grey;
+      border-radius: 0px;
+      overflow: hidden;
+      transform: translateZ(calc(-1 * 9px));
+  }
+  
+  &__paper {
+      height: 98%;
+      width: calc(9px * 2);
+      background: white;
+      position: absolute;
+      top: 1%;
+      right: 0;
+      background: 
+          linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 257, 0)), 
+          repeating-linear-gradient(90deg, white, #e2e2e2 1px, white 3px, #9a9a9a 1px);
+      transform: rotateY(90deg) translateX(calc(9px / 7)) translateZ(calc(var(--thickness) / 1.2));
+  }
+}
+
+.book-shadow {    
+  position: absolute;
+  width: 400px;
+  height: calc(100px + 9px);
+  background: radial-gradient(70% 85%, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+  transform: rotateX(90deg) rotateZ(30deg);
+  transition: transform 1s ease;
+  filter: blur(16px);
+}
+.successPage {
+  margin-top: 100px;
+  text-align: center;
+  padding: 10vh 3vh;
+  min-height: 20vh;
 }
