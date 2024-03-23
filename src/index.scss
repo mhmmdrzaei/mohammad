@@ -895,8 +895,11 @@ font-family: CreamySugar, sans-serif;
   
   &__front {
       border-radius: 0;
-      overflow: hidden;
       transform: translateZ(calc(20px));
+      img {
+        height: 100%;
+        width: auto;
+      }
   }
   
   &__back {

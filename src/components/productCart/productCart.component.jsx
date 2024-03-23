@@ -3,7 +3,7 @@ import { CartContext } from '../../CartContext';
 import { useContext } from 'react';
 import parse from 'html-react-parser';
 import {Cloudinary} from "@cloudinary/url-gen";
-import {AdvancedImage, AdvancedVideo} from '@cloudinary/react';
+import {AdvancedImage} from '@cloudinary/react';
 import {fill} from "@cloudinary/url-gen/actions/resize";
 
 function ProductCard(props) { // props.product is the product we are selling
@@ -27,7 +27,7 @@ function ProductCard(props) { // props.product is the product we are selling
                 <div className="book-wrapper">
                 <div className="book">
                 <div className="book__front">
-               <AdvancedImage cldImg={mainImg} loading="lazy" alt='printed publication '/>
+               <AdvancedImage cldImg={mainImg} alt='printed publication '/>
                 </div>
                 <div className="book__paper"></div>
                 <div className="book__back"></div>
